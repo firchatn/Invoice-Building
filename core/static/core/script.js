@@ -1,6 +1,6 @@
 /* Shivving (IE8 is not supported, but at least it won't look as awful)
 /* ========================================================================== */
-
+var t = 0 ;
 (function (document) {
 	var
 	head = document.head = document.getElementsByTagName('head')[0] || document.documentElement,
@@ -140,7 +140,7 @@ function updateInvoice() {
 	// set total
 	cells[0].innerHTML = total;
 	cells[1].innerHTML = total/100*19;
-
+	t = total;
 	// set balance and meta balance
 	cells[2].innerHTML = document.querySelector('table.meta tr:last-child td:last-child span:last-child').innerHTML = parsePrice(total + parseFloatHTML(cells[1]));
 

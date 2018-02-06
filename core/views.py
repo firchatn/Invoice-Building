@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect
 from .forms import clientForm
+from .models import Facture
 
 # Create your views here.
 def facture(request):
 	return render(request,'core/facture.html')
 
 def index(request):
-	return render(request,'core/home.html')
+	fac = Facture.objects.all()
+	return render(request,'core/home.html', {'fac' : fac})
 
 def client(request):
 	if request.method == "POST":

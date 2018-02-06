@@ -50,6 +50,14 @@
                         <td>the Bird</td>
                         <td>@twitter</td>
                     </tr>
+                    {% for i in fac %}
+                    <tr>
+                        <td>{{i.client.id}}</td>
+                        <td>{{i.client.nom}}</td>
+                        <td>{{i.client.tel}}</td>
+                        <td>{{i.create_date}}</td>
+                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
