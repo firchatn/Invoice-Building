@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Derbel Cosmetique</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" />
+	<script src="{% static 'jquery-3.2.1.min.js' %}"></script>
+
+</head>
+<body>
+<center>
+<form method="POST">
+ {% csrf_token %}
+ {{ form.as_p }}
+ <button type="submit" class="btn btn-primary">Ajouter Client</button>
+ </form>
+ </center>
+<script src="{% static 'jquery-3.2.1.min.js' %}"></script>
+
+</body>
+</html>
