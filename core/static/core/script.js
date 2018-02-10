@@ -70,9 +70,9 @@ function generateTableRow() {
 
 	emptyColumn.innerHTML = '<td><a class="cut">-</a><span contenteditable></span></td>' +
 		'<td><span contenteditable></span></td>' +
-		'<td><span data-prefix>$</span><span contenteditable>0.00</span></td>' +
+		'<td><span data-prefix>$</span><span contenteditable>0.000</span></td>' +
 		'<td><span contenteditable>0</span></td>' +
-		'<td><span data-prefix>$</span><span>0.00</span></td>';
+		'<td><span data-prefix>$</span><span>0.000</span></td>';
 
 	return emptyColumn;
 }
@@ -83,7 +83,7 @@ function parseFloatHTML(element) {
 }
 
 function parsePrice(number) {
-	return number.toFixed(2).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1,');
+	return number.toFixed(3).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1,');
 }
 
 /* Update Number
