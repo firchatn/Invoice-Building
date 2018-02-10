@@ -139,11 +139,13 @@ function updateInvoice() {
 
 	// set total
 	cells[0].innerHTML = total;
-	cells[1].innerHTML = total/100*19;
+	cells[1].innerHTML = total/100*1;
 	t = total;
 	// set balance and meta balance
-	cells[2].innerHTML = document.querySelector('table.meta tr:last-child td:last-child span:last-child').innerHTML = parsePrice(total + parseFloatHTML(cells[1]));
-
+	
+	cells[2].innerHTML = total/100*19;
+	cells[3].innerHTML = 0.600;
+	cells[4].innerHTML = document.querySelector('table.meta tr:last-child td:last-child span:last-child').innerHTML = parsePrice(total + parseFloatHTML(cells[1])+  parseFloatHTML(cells[2]) +  parseFloatHTML(cells[3]));
 	// update prefix formatting
 	// ========================
 
