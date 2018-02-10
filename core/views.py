@@ -6,6 +6,10 @@ from .models import Facture
 def facture(request):
 	return render(request,'core/facture.html')
 
+
+def factureparfun(request):
+	return render(request,'core/factureparfun.html')
+
 def index(request):
 	fac = Facture.objects.all()
 	return render(request,'core/home.html', {'fac' : fac})
