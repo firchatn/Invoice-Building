@@ -1,5 +1,3 @@
-/* Shivving (IE8 is not supported, but at least it won't look as awful)
-/* ========================================================================== */
 var t = 0 ;
 (function (document) {
 	var
